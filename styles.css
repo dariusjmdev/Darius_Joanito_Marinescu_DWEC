@@ -24,3 +24,124 @@ color: #4f8cff;
 #boton:hover {
     background-color: #3a6fcf;
 }
+
+#menu {
+    background: linear-gradient(135deg, #1c1f2a, #252c3d);
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #30394e;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+#menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-list a {
+    display: block;
+    color: #b9c5dc;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+#menu-list a:hover,
+#menu-list a:focus-visible {
+    background-color: #4f8cff;
+    color: #ffffff;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+#menu-list a:active {
+    transform: translateY(0);
+}
+
+#modoNoche {
+    border: 1px solid #4f8cff;
+    background-color: transparent;
+    color: #e8ecf4;
+    font: inherit;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+#modoNoche:hover,
+#modoNoche:focus-visible {
+    background-color: #4f8cff;
+    color: #ffffff;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+#modoNoche:active {
+    transform: translateY(0);
+}
+
+body.tema-claro {
+    background-color: #f4f7fb;
+    color: #243044;
+}
+
+body.tema-claro h1 {
+    color: #2457b8;
+}
+
+body.tema-claro #menu {
+    background: linear-gradient(135deg, #ffffff, #e8eef8);
+    border-color: #c9d5e8;
+    box-shadow: 0 8px 20px rgba(36, 48, 68, 0.12);
+}
+
+body.tema-claro #menu-list a {
+    color: #30466b;
+}
+
+body.tema-claro #menu-list a:hover,
+body.tema-claro #menu-list a:focus-visible {
+    background-color: #2457b8;
+    color: #ffffff;
+}
+
+body.tema-claro #modoNoche {
+    border-color: #2457b8;
+    color: #2457b8;
+}
+
+body.tema-claro #modoNoche:hover,
+body.tema-claro #modoNoche:focus-visible,
+body.tema-claro #boton:hover {
+    background-color: #17428f;
+    color: #ffffff;
+}
+
+body.tema-claro #boton {
+    background-color: #2457b8;
+    color: #ffffff;
+}
+
+@media (max-width: 420px) {
+    #menu-list {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    #menu-list li,
+    #menu-list a,
+    #modoNoche {
+        width: 100%;
+        text-align: center;
+    }
+}
