@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diario del desarrollador</title>
+<title>Tabla videojuegos</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,11 +14,19 @@
             <li><button id="modoNoche">Modo Noche</button></li>
         </ul>
     </nav>
-<h1 id="titulo">Diario del desarrollador</h1>
-<p>Soy Darius y este es mi primer proyecto de DWEC.</p>
-<p>Padre de Uriel pequeñito</p>
-<p id="Mensaje"></p>
-<button id="boton" type="button">Hacer clic</button>
+    <table id="tablaVideojuegos">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Compañía</th>
+                <th>Plataforma</th>
+                <th>Valoración</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+        </tbody>
+    </table>
 <script src="app.js"></script>
 </body>
 </html>

@@ -132,16 +132,87 @@ body.tema-claro #boton {
     color: #ffffff;
 }
 
-@media (max-width: 420px) {
-    #menu-list {
-        flex-direction: column;
-        gap: 2px;
+#tablaVideojuegos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    background: linear-gradient(180deg, #1c2434 0%, #141c2c 100%);
+    color: #e8ecf4;
+    border: 1px solid #30394e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+#tablaVideojuegos th,
+#tablaVideojuegos td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #2b3447;
+}
+
+#tablaVideojuegos thead th {
+    background: linear-gradient(135deg, #4f8cff, #3b6fd6);
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+#tablaVideojuegos tbody tr:nth-child(even) {
+    background-color: rgba(79, 140, 255, 0.06);
+}
+
+#tablaVideojuegos tbody tr:hover {
+    background-color: rgba(79, 140, 255, 0.12);
+    transition: background-color 0.2s ease;
+}
+
+#tablaVideojuegos tbody td {
+    color: #dfe8f7;
+}
+
+#tablaVideojuegos tbody tr:last-child td {
+    border-bottom: none;
+}
+
+body.tema-claro #tablaVideojuegos {
+    background: linear-gradient(180deg, #ffffff 0%, #edf3ff 100%);
+    border-color: #c9d5e8;
+    color: #243044;
+}
+
+body.tema-claro #tablaVideojuegos th,
+body.tema-claro #tablaVideojuegos td {
+    border-bottom-color: #dfe7f5;
+}
+
+body.tema-claro #tablaVideojuegos tbody td {
+    color: #30466b;
+}
+
+@media (max-width: 520px) {
+    #tablaVideojuegos,
+    #tablaVideojuegos thead,
+    #tablaVideojuegos tbody,
+    #tablaVideojuegos tr,
+    #tablaVideojuegos th,
+    #tablaVideojuegos td {
+        display: block;
+        width: 100%;
     }
 
-    #menu-list li,
-    #menu-list a,
-    #modoNoche {
-        width: 100%;
-        text-align: center;
+    #tablaVideojuegos thead {
+        display: none;
+    }
+
+    #tablaVideojuegos tbody tr {
+        border-bottom: 1px solid #2b3447;
+        padding: 8px 0;
+    }
+
+    #tablaVideojuegos tbody td {
+        border-bottom: none;
+        padding: 8px 16px;
     }
 }
