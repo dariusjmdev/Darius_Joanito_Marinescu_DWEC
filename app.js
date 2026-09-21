@@ -64,3 +64,24 @@ const cuerpoTabla = document.getElementById("cuerpoTabla");
         `;
         cuerpoTabla.appendChild(fila);
     });
+const formulario = document.getElementById("formulario");
+formulario.addEventListener("submit", function (event) {
+    event.preventDefault();
+    juegos.push({
+        nombre: document.getElementById("titulo").value,
+        compañia: document.getElementById("compania").value,
+        plataforma: document.getElementById("plataforma").value,
+        valoracion: parseInt(document.getElementById("valoracion").value),
+        precio: parseFloat(document.getElementById("precio").value),
+    });
+    const fila = document.createElement("tr");
+    fila.innerHTML = `
+        <td>${document.getElementById("titulo").value}</td>
+        <td>${document.getElementById("compania").value}</td>
+        <td>${document.getElementById("plataforma").value}</td>
+        <td>${document.getElementById("valoracion").value}</td>
+        <td>${document.getElementById("precio").value}</td>
+    `;
+    cuerpoTabla.appendChild(fila);
+    formulario.reset();
+});

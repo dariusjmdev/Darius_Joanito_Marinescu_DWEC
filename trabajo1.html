@@ -27,6 +27,14 @@
         <tbody id="cuerpoTabla">
         </tbody>
     </table>
+    <form id="formulario">
+        <input type="text" id="titulo" placeholder="Título del videojuego" required>
+        <input type="text" id="compania" placeholder="Compañía" required>
+        <input type="text" id="plataforma" placeholder="Plataforma" required>
+        <input type="number" id="valoracion" placeholder="Valoración" min="0" max="10" step="1" required>
+        <input type="float" id="precio" placeholder="Precio" min="0" step="5" required>
+        <button type="submit">Añadir videojuego</button>
+    </form>
 <script src="app.js"></script>
 </body>
 </html>
